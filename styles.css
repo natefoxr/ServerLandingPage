@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background: linear-gradient(to right, rgba(48, 207, 208, 0.5), rgba(51, 8, 103, 0.5));
+    animation: navbarAnimation 2s ease-in;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+}
+
+#icons-1, #icons-2 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+svg:hover {
+    animation: svgAnimation 0.5s ease-in;
+    animation-fill-mode: forwards; 
+}
+
+#documents {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.document-format {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #000;
+}
+
+.document-format:hover {
+    color: #fff;
+    animation: documentAnimation 2s ease-in;
+}
+
+@keyframes navbarAnimation {
+    from {
+        background-color: rgba(6, 46, 46, 0.815);
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes svgAnimation {
+    from {
+        filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0));
+    }
+    to {
+        filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    }
+}
+
+@keyframes documentAnimation {
+    0% {
+        background: rgba(6, 46, 46, 0.2); 
+    }
+    100% {
+        background: rgba(6, 46, 46, 0.1);
+    }
+}
